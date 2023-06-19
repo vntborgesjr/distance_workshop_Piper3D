@@ -1,0 +1,17 @@
+Referências Bibliográficas
+BUCKLAND, S. et al. Advanced distance sampling: estimating abundance of biological populations. Oxford: Oxford University Press, 2004. 
+BUCKLAND, S. T. et al. Distance sampling: estimating abundance of biological populations. London: Springer-Science+Business Media, B. V., 1993. 
+BUCKLAND, S. T. et al. Introduction to Distance Sampling: Estimating Abundance of Biological Populations. United Kingdom: Oxford University Press, 2001. 
+BUCKLAND, S. T. et al. Methods in Statistical Ecology Distance Sampling: Methods and Applications. New York: Springer International Publishing Switezrland, 2015. 
+BURNHAM, K. P.; ANDERSON, D. R.; LAAKE, J. L. Estimation of density from line transect sampling of biological populations. Wildlife monographs, n. 72, p. 3–202, 1980. 
+FISKE, I.; CHANDLER, R. unmarked: An R Package for Fitting Hierarchical Models of Wildlife Occurrence and Abundance. Journal of Statistical Software, v. 43, n. 10, 2011. 
+ICMBIO/MMA. Monitoramento da biodiversidade: roteiro metodológico de aplicação. Brasília: [s.n.]. 
+LAAKE, J. L. et al. DISTANCE User’s Guide. Forth CollinsCooperative Fish and Wildlife Research Unit, Colorado State University., , 1993. 
+LAAKE, J. L. et al. mrds: Mark-Recapture Distance Sampling. R package version 2.2.8, 2022. 
+MARQUES, F. F. C.; BUCKLAND, S. T. Incorporating Covariates into Standard Line Transect Analyses. Biometrics, v. 59, n. 4, p. 924–935, 11 dez. 2003. 
+MARQUES, T. A. et al. Improving Estimates of Bird Density Using Multiple- Covariate Distance Sampling. The Auk, v. 124, n. 4, p. 1229–1243, 1 out. 2007. 
+MARSHALL, L. dssd: Distance Sampling Survey Design. R package version 0.3.4, 2022. 
+MCDONALD, T. et al. Rdistance: Distance Sampling Analyses. R package version 2.1.3, 2019. 
+MILLER, D. L. et al. Distance sampling in R. Journal of Statistical Software, v. 89, n. 1, p. 1–28, 2019. 
+THOMAS, L. et al. Distance software: design and analysis of distance sampling surveys for estimating population size. Journal of Applied Ecology, v. 47, n. 1, p. 5–14, fev. 2010. 
+ 
