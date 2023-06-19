@@ -1,0 +1,26 @@
+# Exploração dos dados
+
+```         
+Para o Programa Monitora, criamos um conjunto de ferramentas de exploração prévia dos dados, que geram tabelas e gráficos interativos. Essas ferramentas estão disponíveis na no vignette de exploração dos dados, e comentadas na parte de exploração dos dados do tutorial_fluxo_analises (.Rmd e .html). A planilha original, a partir da qual os códigos foram desenvolvidos, reúne dados para todas as espécies de aves e mamíferos das UCs da componente Florestal, monitoradas entre 2014 e 2021. Consideramos, nas etapas de seleção dos dados, somente as espécies validadas, para reduzir erros taxonômicos. Um primeiro critério de exploração dos dados é a avaliação da suficiência amostral. A partir da suficiência amostral, é importante também verificar a qualidade dos dados em termos de efeitos indesejados na sua distribuição.
+```
+
+## Suficiência amostral
+
+```         
+Para que o método de análise por distância possa ser utilizado para estimativas baseadas em modelos, são recomendadas quantidades mínimas de observações e de transectos (Unidades Amostrais). Segundo BUCKLAND et. al. (2015), o número mínimo de réplicas para os transectos deve ser de 10-20, o que deve aumentar para espécies cujas populações são distribuídas em manchas. O número mínimo sugerido de animais ou grupos é de 60 – 80 animais (ou grupos) quando a amostragem é feita pelo método dos transectos lineares. É possível utilizar números menores que estes para realizar as análises, porém deve-se ter o cuidado de verificar se as funções de detecção estão bem modeladas. Estes números recomendados se aplicam a cada função de detecção a ser modelada. Assim, quando se pretende estratificar os dados, dividindo-os em subconjuntos, seja por região geográfica, seja por período amostral, é necessário ter um cuidado para que a suficiência amostral se mantenha dentro dos subconjuntos. 
+```
+
+Um outro aspecto que é necessário observar é o número de repetições, que terá impacto tanto sobre o esforço quanto sobre a suficiência amostral. O número de réplicas reais para cada espécie é o número de transectos. Uma das limitações dos dados do Programa Monitora é o pequeno número de réplicas por Unidade de Conservação e muitas repetições para as mesmas estações amostrais. O excesso de repetições, especialmente em um mesmo período amostral, compromete a premissa de independência entre as observações. Além disso, acaba tendo um efeito de inflar o esforço amostral e a área coberta pela amostragem, o que prejudica as estimativas de densidade.
+
+## Efeitos indesejados na distribuição dos dados
+
+       
+Algumas situações amostrais podem levar a efeitos indesejados na distribuição dos dados, comentadas a seguir:
+
+Empilhamento das observações (heaping) -- ocorre quando valores das distâncias perpendiculares são arredondados. O efeito é um acúmulo de observações sobre a mesma distância, que corresponde a um valor redondo. Um tipo específico de empilhamento é quando ele se dá sobre a distância zero, também chamado de pico próximo a distância zero (spike near zero distance) (Figura 5). Esse tipo de efeito foi observado com frequência nos dados do Programa Monitora (Figura 6). Uma das estratégias para redução dos efeitos de empilhamento é agrupar os dados de distância em intervalos. Implementamos essa estratégia no fluxo 3. Movimento de resposta ao observador -- os animais podem ser repelidos ou atraídos pelo observador. Para animais que apresentam resposta de fuga em relação ao observador o efeito no histograma de frequências é um aumento nas observações em distâncias intermediárias. Para animais que são atraídos pelo observador, a tendência é de um aumento nas observações nas distâncias próximas a zero, o que também pode gerar o padrão de pico próximo a zero (Figura 5). O efeito desse viés sobre as observações é enviesar também os modelos ajustados (formato da curva), as probabilidades de deteção e abundâncias estimadas em cada faixa de distância.
+
+Superdispersão -- é um efeito causado quando as observações não são independentes, como no caso das repetições em um mesmo transecto. O efeito no histograma são picos em algumas distâncias ou reduções abruptas em outras (Figura 5). O excesso de repetições também foi uma limitação encontrada nos dados do Programa Monitora. Implementamos uma estratégia para reduzir o número de repetições mantendo somente a data com o maior número de observações por período amostral. Essa estratégia está desenvolvida no fluxo 2.
+
+Figura 5. Exemplos dos padrões observados quando as distribuições de frequência das observações sofrem efeitos indesejados.
+
+Figura 6. Exploração dos dados de Dasyprocta croconota na Resex Tapajós-Arapiuns definindo os intervalos de distância do histograma para 1m. Observar o grande pico de observações em zero e também picos menores em 5, 10, 15 e 20m, indicando empilhamento dos dados por arredondamento das distâncias.
