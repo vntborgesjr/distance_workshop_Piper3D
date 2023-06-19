@@ -1,0 +1,22 @@
+--- 
+title: "Workshop - Estimativa de densidade por amostragem por distância"
+author: "Luciana A. Fusinatto"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  Este site traz o material de suporte técnico para a realização do workshop de treinamento do pacote distanceMonitoraflorestal para estimativa de densidade de espécies de aves e médios e grandes mamíferos como parte do Projeto Monitora Componente Florestal do ICMBio.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Orientações Gerais
+
+O presente documento serve como material de apoio para a análise de dados de Amostragem por Distância oriundos do Programa Monitora ICMBio/MMA. Para análise dos dados a equipe da Piper 3D desenvolveu o pacote **distanceMonitoraflorestal** (https://github.com/vntborgesjr/piper3d_monitora_florestal), em linguagem R, que reúne as funções para importação, transformação e exploração dos dados assim como para a análise e exploração dos resultados. Algumas das funções relacionadas especificamente a análise de dados e exploração dos resultados foram adaptadas do pacote Distance (MILLER et al., 2019) para a linguagem R. Os códigos foram divididos nas seguintes etapas, que estão disponíveis na pasta de vignettes do pacote: carregamento e transformação dos dados para o Distance; exploração dos dados; amostragem por distância convencional -  fluxo 1 (dados com distâncias exatas com todas as repetições); amostragem por distância convencional - fluxo 2 (dados com distâncias exatas com repetições reduzidas); amostragem por distância convencional - fluxo 3 (dados com distâncias agrupadas com todas as repetições); amostragem por distância com covariáveis - fluxo 4 (tamanho do grupo); amostragem por distância com covariáveis - fluxo 5 (ano); amostragem por distância com dados estratificados – fluxo 6 (Unidades de Conservação como estrato espacial). 
+
+Além dos vignettes, os códigos estão consolidados em um tutorial comentado em R Markdown (tutorial_fluxo_analises) nos formatos .Rmd e .html. No arquivo tutorial_fluxo_analises, apresentamos um fluxo de trabalho comentado com base no modelo de estudo selecionado para a análise dos dados, a cutia (Dasyprocta croconota), para a RESEX Tapajós-Arapiuns (fluxos 1 a 5 e modelos com covariáveis) e para todas as UCs onde ocorre na análise com os dados estratificados (fluxo 6).  
+
+Aqui neste material de aspectos teóricos, apresentamos conceitos básicos da Amostragem por Distância relacionando-os com os dados do Programa Monitora1. Para sua a elaboração, seguimos principalmente as seguintes referências bibliográficas, que indicamos também para consulta: BUCKLAND et al., 2004a, 1993, 2001, 2015. Referências adicionais são citadas ao longo do texto. Além da bibliografia, consultamos e recomendamos o curso online e gratuito de Amostragem por Distância: Online course on distance sampling (disponível em: https://workshops.distancesampling.org/online-course/). Também é uma boa fonte de consulta o site do Distance Sampling (https://distancesampling.org/). E o livro de BUCKLAND et al. (2015) possui um material suplementar online, disponível em (https://www.creem.st-andrews.ac.uk/software/ds-manda/). Para aqueles que não possuem familiaridade com a linguagem R, existe uma grande quantidade de cursos e materiais didáticos disponíveis online. Para quem tiver interesse, há um material didático do curso de [Introdução ao R para Ecólogos](https://github.com/vntborgesjr/IRE-21/) ministrado por Vitor N. T. Borges Jr. no Programa de Pós-graduação em Biodiversidade da UNIRIO em 2021 e disponível no GitHub.  
